@@ -1,0 +1,53 @@
+<div class="box" *ngIf="product">
+    <a [href]="" class="product-link">
+        <span>
+            <div id="item-image-div" class="image">
+                <img id="item-image" [src]="product.imageUrl" />
+            </div>
+            <div>
+                <div class="item-info">
+                    <div class="style-badge">
+                    </div>
+                    <div class="style-name-product">
+                        <div class="name">
+                            <h3>{{ product.name }}</h3>
+                        </div>
+                        <div class="item-rating">
+                            <div class="style-star-rating">
+                                <div class="style-rated-star">
+                                    <app-star-svg fillColor="#FFC400"></app-star-svg>
+                                    <app-star-svg fillColor="#FFC400"></app-star-svg>
+                                    <app-star-svg fillColor="#FFC400"></app-star-svg>
+                                    <app-star-svg fillColor="#FFC400"></app-star-svg>
+                                    <app-star-svg fillColor="#FFC400"></app-star-svg>
+                                </div>
+                                <app-star-svg fillColor="#DDDDE3"></app-star-svg>
+                                <app-star-svg fillColor="#DDDDE3"></app-star-svg>
+                                <app-star-svg fillColor="#DDDDE3"></app-star-svg>
+                                <app-star-svg fillColor="#DDDDE3"></app-star-svg>
+                                <app-star-svg fillColor="#DDDDE3"></app-star-svg>
+                            </div>
+                            <span class="quantity has-border">
+                                Đã bán {{ product.numberSoldItems }}
+                            </span>
+                        </div>
+                        <div>
+                            <div class="price-discount" *ngIf=!hasDiscount>
+                                <div class="price-discount__price">
+                                    {{product.price | currency: 'VND'}}
+                                </div>
+                            </div>
+                            <div class="price-discount has-discount" *ngIf=hasDiscount>
+                                <div class="price-discount__price">
+                                    {{product.price | currency:'VND'}}
+                                </div>
+                                <div class="price-discount__discount">-{{product.sale | percent}}</div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </span>
+    </a>
+</div>

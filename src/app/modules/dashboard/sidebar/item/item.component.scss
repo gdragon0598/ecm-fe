@@ -1,0 +1,58 @@
+.list-group-item {
+    display: flex;
+    padding: 7px 16px;
+    -webkit-box-align: center;
+    align-items: center;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+    border: 1px solid transparent;
+}
+
+.list-group-item a {
+    background-color: transparent;
+}
+
+.list-group-item i {
+    margin-right: 10px;
+}
+
+.list-group-item:hover {
+    background-color: #e6e6e6;
+}
+
+//change color when the item is clicked
+.list-group-item.active {
+    background-color: #cececf;
+}
+
+#item-icon {
+    width: 32px;
+    height: 32px;
+
+}
+
+#item-icon {
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    border-radius: 35%;
+    overflow: hidden;
+    box-sizing: content-box;
+}
+
+#item-icon-div {
+    flex: 0 0 32px;
+    height: 32px;
+    margin-right: 8px;
+    line-height: 0;
+}
+
+#item-content {
+    display: flex;
+    gap: 4px;
+    -webkit-box-align: center;
+    align-items: center;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 150%;
+    color: rgb(39, 39, 42);
+}

@@ -1,0 +1,67 @@
+<nav class="navbar navbar-expand-xl navbar-light bg-light justify-content-between">
+    <div class="logo-menu">
+        <a class="navbar-brand tiki-logo" href="#">
+            <img src="https://salt.tikicdn.com/ts/upload/e4/49/6c/270be9859abd5f5ec5071da65fab0a94.png" alt="logo">
+        </a>
+    </div>
+
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse  mr-lg-1" id="navbarSupportedContent">
+        <div class="w-50">
+            <form class="form-text my-2 my-lg-2 ">
+                <input class="form-control mr-sr-4 " type="search" placeholder="Search" aria-label="Search">
+            </form>
+        </div>
+        <ul class="navbar-nav">
+            <div class="home-button">
+                <a href="#" type="button" class="custom-button btn btn-link btn-outline-secondary" rel="nofollow">
+                    <div class="row pe-3">
+                        <div class="home-page-logo"> <img class="home-logo"
+                                src="https://salt.tikicdn.com/ts/upload/b4/90/74/6baaecfa664314469ab50758e5ee46ca.png"
+                                alt="logo"></div>
+                        Trang chủ
+
+                    </div>
+                </a>
+            </div>
+
+            <div class="home-button" nz-dropdown [nzDropdownMenu]="accountMenu">
+                <a href="#" type="button" class="custom-button btn btn-link btn-outline-secondary">
+                    <div class="row pe-3">
+                        <div class="home-page-logo ">
+                            <img class="home-logo"
+                                src="https://salt.tikicdn.com/ts/upload/07/d5/94/d7b6a3bd7d57d37ef6e437aa0de4821b.png"
+                                alt="logo">
+                        </div>
+                        Tài khoản
+                    </div>
+                </a>
+            </div>
+            <nz-dropdown-menu #accountMenu="nzDropdownMenu">
+                <ul nz-menu nzSelectable class="py-1 mx-3">
+                    <a routerLink="account">
+                        <li nz-menu-item>Thông tin tài khoản</li>
+                    </a>
+                    <a routerLink="cart">
+                        <li nz-menu-item>Đơn hàng của tôi</li>
+                    </a>
+                    <li nz-menu-item>Đăng xuất</li>
+                </ul>
+            </nz-dropdown-menu>
+        </ul>
+
+    </div>
+
+    <div class="ml-auto me-3 btn btn-link btn-outline-secondary" routerLink="">
+        <nz-badge [nzCount]="2" [nzOverflowCount]="10">
+            <img class="home-logo"
+                src="https://salt.tikicdn.com/ts/upload/51/e2/92/8ca7e2cc5ede8c09e34d1beb50267f4f.png" alt="logo">
+        </nz-badge>
+    </div>
+
+
+</nav>

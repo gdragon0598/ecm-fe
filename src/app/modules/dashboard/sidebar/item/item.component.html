@@ -1,0 +1,9 @@
+<!-- list-group-item.component.html -->
+<a *ngIf="category" [routerLink]="['/products/category', category.id]" class="list-group-item">
+    <div id="item-icon-div" class="image">
+        <img id="item-icon" [src]="category.iconUrl" />
+    </div>
+    <div id="item-content">
+        {{ category.name }}
+    </div>
+</a>
