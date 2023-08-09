@@ -25,7 +25,7 @@
 .home-logo {
     width: 24px;
     height: 24px;
-    position: absolute;
+    //position: absolute;
 }
 
 .home-button {
@@ -39,4 +39,9 @@
     font-size: 14px;
     line-height: 150%;
     color: rgb(128, 128, 137);
+}
+
+nz-badge {
+    margin-right: 20px;
+    display: flex;
 }

@@ -1,4 +1,6 @@
 import { Component, Inject, Injectable, Input } from '@angular/core';
+import { Category } from 'src/app/model/category.model';
+import { ProductService } from 'src/app/services/product.service';
 
 @Component({
   selector: 'app-list-group-item',
@@ -7,6 +9,5 @@ import { Component, Inject, Injectable, Input } from '@angular/core';
 })
 @Injectable()
 export class ItemComponent {
-  @Input() content: string = '';
-  @Input() imageUrl: string = ''; // Add the imageUrl property
+  @Input() category: Category | undefined;
 }

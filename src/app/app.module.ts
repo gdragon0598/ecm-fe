@@ -11,13 +11,11 @@ import vi from '@angular/common/locales/vi';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { AccountComponent } from './modules/account/account.component';
 registerLocaleData(vi);
 
 @NgModule({
   declarations: [
-    AppComponent,
-    AccountComponent
+    AppComponent
   ],
   imports: [
     BrowserModule,

@@ -9,19 +9,32 @@
     <link rel="icon" type="image/x-icon" href="favicon.ico">
 </head>
 
-<body id="dashboard-body">
+<body>
     <app-header></app-header>
-
-    <div id="container-div" class="container-fluid">
+    <div class="container-fluid">
         <div class="row">
-            <div class="col-md-3 style_sidebar">
-                <app-sidebar [listItems]=secondSideBar.listItems [title]=secondSideBar.title></app-sidebar>
+            <div class="col-md-3 style_sidebar" *ngIf="categories">
+                <app-sidebar [categoryList]=categories title="Danh mục"></app-sidebar>
             </div>
             <div class="col-md-9">
                 <div class="row slide-banner">
                     <app-slide-banner class="slide-banner"></app-slide-banner>
                 </div>
-                <div class="content" *ngIf="products">
+                <div class="row.py-md-0">
+                    <div class="best-sell bg-white">
+                        <div class="ps-md-2 py-md-2">
+                            <h5>Sản phẩm mới</h5>
+                        </div>
+                        <div class="product-grid bg-white border-0 pb-md-2" *ngIf="newProducts">
+                            <div *ngFor="let product of newProducts">
+                                <div app-product-item [product]="product">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-grid" *ngIf="products">
                     <div *ngFor="let product of products">
                         <div app-product-item [product]="product">
                         </div>
@@ -29,13 +42,11 @@
                 </div>
                 <div class="row justify-content-md-center">
                     <button href="#" type="button" (click)="getProducts()"
-                        class="custom-button col-lg-3 btn btn-link btn-outline-secondary my-lg-4 px-3">
+                        class="custom-button col-lg-3 btn btn-outline-info my-lg-4 px-3">
                         Xem thêm
                     </button>
                 </div>
-
             </div>
-
         </div>
     </div>
     <div class="col-md-9">

@@ -1,7 +1,7 @@
-<div id="side-bar-div" class="list-group">
+<div class="list-group">
     <div id="title-div">
         {{title}}
     </div>
-    <app-list-group-item *ngFor="let item of listItems" [content]=item.content [imageUrl]=item.imageUrl>
+    <app-list-group-item *ngFor="let category of categoryList" [category]=category>
     </app-list-group-item>
 </div>

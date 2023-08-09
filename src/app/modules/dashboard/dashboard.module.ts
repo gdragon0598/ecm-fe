@@ -22,7 +22,7 @@ import { AppRoutingModule } from 'src/app/app-routing.module';
   imports: [
     CommonModule, ComponentModule, AppRoutingModule
   ],
-  exports: [],
+  exports: [ProductItemComponent],
   providers: [{
     provide: LOCALE_ID,
     useValue: 'vi-VN'

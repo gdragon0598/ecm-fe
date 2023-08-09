@@ -1,6 +1,7 @@
 import { Component, Inject, Input } from '@angular/core';
 
 import { ItemComponent } from './item/item.component';
+import { Category } from 'src/app/model/category.model';
 
 @Component({
   selector: 'app-sidebar',
@@ -9,5 +10,5 @@ import { ItemComponent } from './item/item.component';
 })
 export class SidebarComponent {
   @Input() title: String = "";
-  @Input() listItems: ItemComponent[] = [];
+  @Input() categoryList: Array<Category> = [];
 }
